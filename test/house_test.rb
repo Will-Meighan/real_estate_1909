@@ -39,16 +39,18 @@ class HouseTest < Minitest::Test
 
   def test_room_1_can_be_added_to_house
     skip
+    # Why is the expected value returning 'nil'?
     assert_equal @rooms, @house.add_room(@room_1)
   end
 
   def test_room_2_can_be_added_to_house
-    skip
+    
     assert_equal @rooms, @house.add_room(@room_2)
   end
 
   def test_it_can_calculate_number_of_rooms_in_category
     skip
+    # Same issue as above with 'nil'
     assert_equal [@room_1, @room_2], @house.rooms_from_category(:bedroom)
   end
 

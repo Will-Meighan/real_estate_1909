@@ -26,9 +26,9 @@ class House
   end
 
   def area
-    #length times width for each room, then add rooms
-    room_area = @room_1(length * width)
-
+    @rooms.reduce(0) do |total_area, room|
+      total_area += room.area
+    end
   end
 
 end
